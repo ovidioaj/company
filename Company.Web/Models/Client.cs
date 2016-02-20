@@ -11,6 +11,7 @@ namespace Company.Web.Models
         [MaxLength(200)]
         public string Name { get; set; }
 
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ClientId { get; set; }
 
