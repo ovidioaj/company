@@ -9,21 +9,28 @@ namespace Company.Web.Models
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
+        [Display(Name = "Cód. Produto")]
         public int ProductId { get; set; }
         
         [Required]
         [MaxLength(200)]
+        [Display(Name = "Descrição")]
         public string Description { get; set; }
         
         [MaxLength(200)]
+        [Display(Name = "Marca")]
         public string Brand { get; set; }
         
         [Required]
-        public double price { get; set; }
-        
+        [Display(Name = "Preço de Venda")]
+        public double SellingPrice { get; set; }
+
         [Required]
-        public byte[] Image { get; set; }
-        
-        public virtual Stock StockOfOrigin { get; set; }
+        [Display(Name = "Cód. Produto")]
+        public double CostPrice { get; set; }
+
+        [Required]
+        [Display(Name = "Cód. Produto")]
+        public double BuyingPrice { get; set; }
     }
 }
